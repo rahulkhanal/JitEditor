@@ -59,6 +59,7 @@ h1 span{
   border: none;
   cursor: pointer;
   color: #40E982;
+  transition: 0.3s ease;
 }
 .homepage span button:hover{
   color: #0fac4b;
@@ -69,8 +70,36 @@ h1 span{
   font-size: 0.9rem;
   cursor: pointer;
   background-color: #40E982;
+  transition: 0.3s ease;
 }
 .submit-btn:hover{
   background-color: #0fac4b;
+}
+footer{
+  margin-top: 5rem;
+}
+
+/******************************** Alert Box ************************************/
+.alert-box-success{
+  background-color: rgb(3, 117, 3);
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+  color: aliceblue;
+  width: 220px;
+  text-align: center;
+}
+.alert-box-danger{
+  background-color: rgb(197, 10, 10);
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+  color: aliceblue;
+  width: 220px;
+  text-align: center;
 }
 /******************************** Editor Page ************************************/
