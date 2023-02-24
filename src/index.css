@@ -90,6 +90,7 @@ footer{
   color: aliceblue;
   width: 220px;
   text-align: center;
+  box-shadow: 0 0 8px white;
 }
 .alert-box-danger{
   background-color: rgb(197, 10, 10);
@@ -101,5 +102,6 @@ footer{
   color: aliceblue;
   width: 220px;
   text-align: center;
+  box-shadow: 0 0 8px white;
 }
 /******************************** Editor Page ************************************/

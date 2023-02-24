@@ -5,6 +5,7 @@ import Alert from './alert'
 
 const Home = () => {
     const [roomid, setRoomid] = useState(null);
+    const [userName, setUserNAme] = useState(null);
     const [showalert, setShowAlert] = useState({
         show: false,
         type: "",
@@ -33,19 +34,20 @@ const Home = () => {
         })
     }
     const filterAccount = (e) => {
-        if(!roomid){
+        if (!roomid || !userName) {
             setShowAlert({
                 show: true,
                 type: "danger",
-                message: "Empty Credintial !"
+                message: "Empty Credential !"
             })
             e.preventDefault();
         }
+
     }
     return (
         <>
             {showalert.show &&
-                <Alert {...showalert} hideAlert={hideAlert}/>
+                <Alert {...showalert} hideAlert={hideAlert} />
             }
             <center>
                 <img src="/logo.png" alt="jeteditor" width='200px' />
@@ -54,8 +56,8 @@ const Home = () => {
             <div className='homepage'>
                 <form>
                     <input type="text" name='roomid' placeholder='ROOM ID' value={roomid} onChange={(e) => setRoomid(e.target.value)} />
-                    <input type="text" name='username' placeholder='USERNAME' />
-                    <input type="submit" value='Join Now' className='submit-btn' onClick={(e)=>filterAccount(e)}/>
+                    <input type="text" name='username' placeholder='USERNAME' value={userName} onChange={(e) => setUserNAme(e.target.value)}/>
+                    <input type="submit" value='Join Now' className='submit-btn' onClick={(e) => filterAccount(e)} />
                     <span>Create Your Room ID: <button onClick={(e) => generateRandom(e)}><u>Click here </u></button></span>
                 </form>
             </div>
